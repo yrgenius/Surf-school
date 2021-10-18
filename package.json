@@ -20,6 +20,7 @@
     "gulp-uglify-es": "^3.0.0",
     "jquery": "^3.6.0",
     "pngquant-bin": "^6.0.0",
-    "sass": "^1.41.1"
+    "sass": "^1.41.1",
+    "slick-carousel": "^1.8.1"
   }
 }

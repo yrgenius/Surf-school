@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .hero {
@@ -209,7 +210,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            background-image: url(../images/learn.jpg);
+            background-image: url(../images/main/surf.jpg);
         }
     }
 }
@@ -285,6 +286,50 @@
     }
 }
 
+.services {
+    background-color: #f8f8f8;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        background-color: #fff;
+        padding: 45px 43px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tarif {
+        color: #01353e;
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+
+    &__price {
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-align: center;
+        margin-top: auto;
+
+        span {
+            font-size: 18px;
+            position: relative;
+            top: -5px;
+        }
+    }
+}
+
 .blockquote {
     padding: 81px 314px;
     text-align: center;
@@ -351,8 +396,67 @@
 }
 
 .blog {
-    &__carousel {
-        color: #fff;
+}
+
+.carousel {
+    color: #fff;
+    position: relative;
+
+    &__item {
+        @extend %img;
+
+        .container {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            min-height: 500px;
+            height: 100%;
+        }
+    }
+
+    &__inner {
+        margin: auto 0;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 1.2;
+        font-weight: 400;
+        max-width: 600px;
+        text-transform: uppercase;
+        position: relative;
+        right: 0;
+    }
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+
+        li:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        button {
+            width: 15px;
+            height: 15px;
+            border: none;
+            background-color: #fff;
+            border-radius: 50%;
+            font-size: 0;
+            padding: 0;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #00b2a0;
+            }
+        }
+    }
+
+    .slick-active button {
+        background-color: #00b2a0;
     }
 }
 
